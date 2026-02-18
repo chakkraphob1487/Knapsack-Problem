@@ -13,11 +13,9 @@ const sampleItemsGreedy = [
 
 // Sample items for DP (from example table)
 const sampleItemsDP = [
-    { name: 'สินค้า 1', weight: 1, value: 1 },
-    { name: 'สินค้า 2', weight: 2, value: 6 },
-    { name: 'สินค้า 3', weight: 5, value: 18 },
-    { name: 'สินค้า 4', weight: 6, value: 22 },
-    { name: 'สินค้า 5', weight: 7, value: 28 },
+    { name: 'แล็ปท็อป', weight: 10, value: 60 },
+    { name: 'กล้อง', weight: 20, value: 100 },
+    { name: 'หนังสือ', weight: 30, value: 120 },
 ];
 
 // ===== Query Parameters Utilities =====
