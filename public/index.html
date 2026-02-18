@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Knapsack Problem Solver - Greedy Algorithm & Dynamic Programming"
+    />
+    <title>Knapsack Problem Solver</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-particles"></div>
+
+    <!-- Hero Header -->
+    <header class="hero">
+      <div class="hero-icon">🎒</div>
+      <h1>Knapsack Problem Solver</h1>
+      <p>เปรียบเทียบ Fractional Knapsack (Greedy) และ 0/1 Knapsack (DP)</p>
+      <a href="guide.html" class="hero-guide-btn">📚 คู่มือการใช้งาน</a>
+    </header>
+
+    <div class="container">
+      <!-- Tab Navigation -->
+      <nav class="tab-nav">
+        <button
+          class="tab-btn active-greedy"
+          id="tab-greedy"
+          onclick="switchTab('greedy')"
+        >
+          <span class="tab-icon">⚡</span>
+          Fractional Knapsack (Greedy)
+        </button>
+        <button class="tab-btn" id="tab-dp" onclick="switchTab('dp')">
+          <span class="tab-icon">📊</span>
+          0/1 Knapsack (DP)
+        </button>
+      </nav>
+
+      <!-- ===================== -->
+      <!-- TAB 1: Greedy -->
+      <!-- ===================== -->
+      <div class="tab-content active" id="content-greedy">
+        <div class="card">
+          <div class="card-header">
+            <div class="icon icon-green">📦</div>
+            <div>
+              <h2>กรอกข้อมูลสิ่งของ</h2>
+              <p>ระบุชื่อ น้ำหนัก และมูลค่าของแต่ละสิ่งของ</p>
+            </div>
+            <button class="btn btn-share btn-share-header" onclick="generateShareLink('greedy')">
+              🔗 แชร์ลิงก์
+            </button>
+          </div>
+
+          <div class="capacity-input">
+            <div class="form-group">
+              <label>ความจุของเป้ (W)</label>
+              <input
+                type="number"
+                id="greedy-capacity"
+                placeholder="เช่น 50"
+                min="1"
+                value="50"
+              />
+            </div>
+          </div>
+
+          <div class="capacity-input">
+            <div class="form-group">
+              <label>🎯 เกณฑ์การเลือก (Greedy Strategy)</label>
+              <select id="greedy-strategy" class="strategy-select">
+                <option value="ratio">เลือกของที่มีมูลค่าต่อน้ำหนักสูงสุด (Max Value/Weight)</option>
+                <option value="value">เลือกของที่มีมูลค่าสูงสุด (Max Value)</option>
+                <option value="weight">เลือกของน้ำหนักน้อยสุด (Min Weight)</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="greedy-items">
+            <!-- Dynamic item rows -->
+          </div>
+
+          <div class="btn-group">
+            <button class="btn btn-add" onclick="addItem('greedy')">
+              ➕ เพิ่มสิ่งของ
+            </button>
+          </div>
+
+          <button class="btn btn-solve-green" onclick="solveGreedy()">
+            ⚡ คำนวณ Greedy Algorithm
+          </button>
+        </div>
+
+        <div id="greedy-result"></div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- TAB 2: Dynamic Programming -->
+      <!-- ===================== -->
+      <div class="tab-content" id="content-dp">
+        <div class="card">
+          <div class="card-header">
+            <div class="icon icon-blue">📦</div>
+            <div>
+              <h2>กรอกข้อมูลสิ่งของ</h2>
+              <p>ระบุชื่อ น้ำหนัก และมูลค่าของแต่ละสิ่งของ</p>
+            </div>
+            <button class="btn btn-share btn-share-header" onclick="generateShareLink('dp')">
+              🔗 แชร์ลิงก์
+            </button>
+          </div>
+
+          <div class="capacity-input">
+            <div class="form-group">
+              <label>ความจุของเป้ (W)</label>
+              <input
+                type="number"
+                id="dp-capacity"
+                placeholder="เช่น 50"
+                min="1"
+                value="50"
+              />
+            </div>
+          </div>
+
+          <div id="dp-items">
+            <!-- Dynamic item rows -->
+          </div>
+
+          <div class="btn-group">
+            <button class="btn btn-add" onclick="addItem('dp')">
+              ➕ เพิ่มสิ่งของ
+            </button>
+          </div>
+
+          <button class="btn btn-solve-blue" onclick="solveDP()">
+            📊 คำนวณ Dynamic Programming
+          </button>
+        </div>
+
+        <div id="dp-result"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

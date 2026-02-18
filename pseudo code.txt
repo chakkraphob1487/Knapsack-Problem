@@ -1,0 +1,43 @@
+========================================
+  Fractional Knapsack (Greedy)
+========================================
+
+Greedy_FractionalKnapsack(items[], W):
+  1. compute ratio[i] = v[i] / w[i] for all items
+  2. sort items by ratio descending
+  3. remaining = W, total = 0
+  4. for each item i in sorted order:
+       if remaining == 0, stop
+       if w[i] <= remaining:
+         take item i fully
+         total += v[i]
+         remaining -= w[i]
+       else:
+         take fraction = remaining / w[i]
+         total += v[i] * fraction
+         remaining = 0
+  5. return total
+
+
+========================================
+  0/1 Knapsack (Dynamic Programming)
+========================================
+
+Knapsack_01_DP(items[], W):
+  1. n = number of items
+  2. create dp[0..n][0..W] initialized to 0
+  3. for i = 1 to n:
+       for w = 0 to W:
+         if w[i] > w:
+           dp[i][w] = dp[i-1][w]
+         else:
+           dp[i][w] = max(dp[i-1][w],
+                          dp[i-1][w - w[i]] + v[i])
+  4. result = dp[n][W]
+  5. traceback:
+       w = W
+       for i = n down to 1:
+         if dp[i][w] != dp[i-1][w]:
+           select item i
+           w = w - w[i]
+  6. return result, selected items
