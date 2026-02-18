@@ -1,0 +1,347 @@
+/* ===========================
+   Guide Page Styles (Cream Theme)
+   =========================== */
+
+/* ===== Navigation ===== */
+.guide-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-back {
+    padding: 10px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-back:hover {
+    background: var(--bg-secondary);
+}
+
+/* ===== Table of Contents ===== */
+.toc {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.toc a {
+    padding: 10px 14px;
+    background: var(--bg-primary);
+    border-left: 3px solid var(--accent-purple);
+    border-radius: 4px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.toc a:hover {
+    background: #f3e5f5;
+    border-left-color: var(--accent-green);
+}
+
+/* ===== Guide Content ===== */
+.guide-content {
+    line-height: 1.7;
+}
+
+.guide-content h3 {
+    margin-top: 28px;
+    margin-bottom: 12px;
+    color: var(--accent-green);
+    font-size: 1.2rem;
+}
+
+.guide-content h4 {
+    margin-top: 16px;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+}
+
+.guide-content p {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+}
+
+.guide-content ul, .guide-content ol {
+    margin-left: 20px;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+}
+
+.guide-content li {
+    margin-bottom: 6px;
+}
+
+/* ===== Info Boxes ===== */
+.example-box, .warning-box, .success-box {
+    padding: 16px;
+    border-radius: var(--radius);
+    margin: 16px 0;
+}
+
+.example-box {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+}
+
+.warning-box {
+    background: #ffebee;
+    border: 1px solid #ef9a9a;
+}
+
+.success-box {
+    background: #e8f5e9;
+    border: 1px solid #a5d6a7;
+}
+
+/* ===== Comparison Grid ===== */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.comparison-item {
+    padding: 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.comparison-item h4 {
+    margin-top: 0;
+    color: var(--accent-blue);
+}
+
+/* ===== Highlight Colors ===== */
+.highlight-green {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.highlight-blue {
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+
+/* ===== Step Guide ===== */
+.step-guide {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.step-guide-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.step-guide-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.step-guide-content h4 {
+    margin-top: 0;
+    color: var(--accent-blue);
+}
+
+.note {
+    font-size: 0.85rem;
+    color: var(--accent-amber);
+    font-style: italic;
+}
+
+/* ===== Algorithm Steps ===== */
+.algorithm-steps {
+    background: var(--bg-primary);
+    padding: 16px;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--accent-green);
+    margin: 16px 0;
+}
+
+/* ===== Strategy Comparison ===== */
+.strategy-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.strategy-card {
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 2px solid;
+}
+
+.strategy-ratio {
+    background: #e8f5e9;
+    border-color: var(--accent-green);
+}
+
+.strategy-value {
+    background: #fff8e1;
+    border-color: var(--accent-amber);
+}
+
+.strategy-weight {
+    background: #e3f2fd;
+    border-color: var(--accent-blue);
+}
+
+.strategy-desc {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+/* ===== Formula ===== */
+.formula {
+    background: var(--bg-secondary);
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+    color: var(--accent-purple);
+}
+
+.strategy-result {
+    font-weight: 600;
+    margin: 14px 0 6px 0;
+}
+
+.example-mini {
+    background: var(--bg-secondary);
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+.result-value {
+    color: var(--accent-amber);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* ===== Formula Box ===== */
+.formula-box {
+    background: #f3e5f5;
+    border: 1px solid #ce93d8;
+    padding: 20px;
+    border-radius: var(--radius);
+    margin: 16px 0;
+}
+
+.formula-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+/* ===== DP Table ===== */
+.dp-example-table {
+    overflow-x: auto;
+    margin: 16px 0;
+}
+
+.result-explanation {
+    background: #e8f5e9;
+    padding: 14px;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--accent-green);
+    margin: 16px 0;
+}
+
+.highlight-text {
+    color: var(--accent-amber);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.comparison-table-wrapper {
+    overflow-x: auto;
+    margin: 16px 0;
+}
+
+/* ===== Pseudo Code Styles ===== */
+.pseudocode-block {
+    background: #fafafa;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin: 16px 0;
+}
+
+.pseudocode-header {
+    background: #f3e5f5;
+    padding: 12px 16px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--accent-purple);
+    border-bottom: 1px solid #ce93d8;
+}
+
+.pseudocode {
+    padding: 16px 20px;
+    margin: 0;
+    font-family: 'Courier New', 'Consolas', monospace;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    overflow-x: auto;
+    white-space: pre;
+    tab-size: 4;
+}
+
+.pseudocode .kw {
+    color: var(--accent-purple);
+    font-weight: 700;
+}
+
+.pseudocode .line-comment {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .strategy-comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pseudocode {
+        font-size: 0.7rem;
+        padding: 12px;
+    }
+}
