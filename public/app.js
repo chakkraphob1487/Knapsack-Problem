@@ -6,9 +6,9 @@ const API_BASE = '';
 
 // Sample items for initial load
 const sampleItemsGreedy = [
-    { name: 'แล็ปท็อป', weight: 10, value: 60 },
-    { name: 'กล้อง', weight: 20, value: 100 },
-    { name: 'หนังสือ', weight: 30, value: 120 },
+    { name: 'ข้าวสาร', weight: 10, value: 60 },
+    { name: 'ทองคำ', weight: 20, value: 100 },
+    { name: 'น้ำดื่ม', weight: 30, value: 120 },
 ];
 
 // Sample items for DP (from example table)
