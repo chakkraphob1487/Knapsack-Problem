@@ -540,7 +540,7 @@ function renderDPResult(data) {
     </div>`;
 
     // DP Table
-    if (data.dpTable && data.capacity <= 30 && data.items.length <= 10) {
+    if (data.dpTable && data.capacity <= 100 && data.items.length <= 20) {
         html += `
             <div class="result-card dp-result">
                 <div class="result-title">📊 ตาราง DP (Dynamic Programming Table)</div>
